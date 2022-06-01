@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/*qui iniziano i miei dubbi, se sass è un modo per scrivere css più velocemnte c'è sicuramente un altro modo per scrivere quanto segue.*/
+/*non ho capito alcuni funzionamenti più avanzati di sass, come scrivere più proprietà in una sola variabile, perchè non ho finito il corso, volevo solo fare una prova per vedere se avevo capito le basi.. quindi per ora lo lascio scritto così...*/
+div {
+  border: 1px solid red;
+  padding: 30px;
+}
+
+h1 {
+  color: green;
+  text-decoration: underline;
+  /*qua non sapevo se metter border bottom o underline così ne ho scelto una.. anche se non capisco perchè non riempie tutta la riga.*/
+  text-decoration-color: blue;
+  text-align: center;
+  /*qua invece ho messo text align perchè l'unica alternativa che conoscevo per centrare il contenuto era justify content*/
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+}
+
+article {
+  border: 1px solid green;
+  padding: 30px;
+}
+
+article:nth-child(1) > p {
+  color: blue;
+}
+
+article:nth-child(3) > p {
+  color: blue;
+}
+
+article:nth-child(2) > p {
+  color: red;
+}
+
+article:nth-child(4) > p {
+  color: red;
+}
+
+/*sto ancora lavorando sui seletteri e come ottimizzarli, se hai qualche suggerimento per non scrivere così tanto codice è benaccetto. p.s avrei potuto utilizzare una classe per il 1 e il 3 p e cosi via ma mi sembrava troppo banale ahaha*/
+
+/*# sourceMappingURL=style.css.map */

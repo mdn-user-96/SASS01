@@ -1,0 +1,58 @@
+$var1-red: red;
+$var2-green: green;
+$var3-blue: blue;
+$general-border: 1px solid;
+$underline: underline;
+$t-a-center: center;
+
+/*qui iniziano i miei dubbi, se sass è un modo per scrivere css più velocemnte c'è sicuramente un altro modo per scrivere quanto segue.*/
+
+$flex: flex;
+$centered: center;
+$padding: 30px;
+$f-d-row: row;
+
+/*non ho capito alcuni funzionamenti più avanzati di sass, come scrivere più proprietà in una sola variabile, perchè non ho finito il corso, volevo solo fare una prova per vedere se avevo capito le basi.. quindi per ora lo lascio scritto così...*/
+
+div {
+    border: $general-border $var1-red;
+    padding: $padding;
+}
+
+h1 {
+    color: $var2-green;
+    text-decoration: $underline;
+    /*qua non sapevo se metter border bottom o underline così ne ho scelto una.. anche se non capisco perchè non riempie tutta la riga.*/
+    text-decoration-color: $var3-blue;
+    text-align: $t-a-center;
+    /*qua invece ho messo text align perchè l'unica alternativa che conoscevo per centrare il contenuto era justify content*/
+}
+
+section {
+    display: $flex;
+    flex-direction: $f-d-row;
+}
+
+article {
+    border: $general-border $var2-green;
+    padding: $padding;
+}
+
+article:nth-child(1)>p {
+    color: $var3-blue;
+}
+
+article:nth-child(3)>p {
+    color: $var3-blue;
+}
+
+article:nth-child(2)>p {
+    color: $var1-red;
+}
+
+article:nth-child(4)>p {
+    color: $var1-red;
+}
+
+
+/*sto ancora lavorando sui seletteri e come ottimizzarli, se hai qualche suggerimento per non scrivere così tanto codice è benaccetto. p.s avrei potuto utilizzare una classe per il 1 e il 3 p e cosi via ma mi sembrava troppo banale ahaha*/
